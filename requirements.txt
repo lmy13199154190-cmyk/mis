@@ -4,3 +4,5 @@ plotly
 python-dateutil
 pysqlite3-binary
 scikit-learn
+matplotlib
+
