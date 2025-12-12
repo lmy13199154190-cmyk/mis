@@ -1,8 +1,11 @@
 streamlit
 pandas
+numpy
 plotly
 python-dateutil
 pysqlite3-binary
 scikit-learn
 matplotlib
+fpdf2
+
 
