@@ -34,7 +34,7 @@ def show(conn):
             conn.execute("UPDATE orders SET out_cabinet_time=?, status=? WHERE id=?", (now,"completed", r[0]))
             conn.commit()
             st.success("已标记出柜")
-            st.experimental_rerun()
+            st.rerun()
         if cols[1].button("重新评估风险", key=f"re_risk_{r[0]}"):
             # fetch row
             cur = conn.cursor()
@@ -49,4 +49,5 @@ def show(conn):
             conn.execute("UPDATE orders SET risk_score=? WHERE id=?", (score, r[0]))
             conn.commit()
             st.success(f"风险评分更新为 {score:.2f}")
-            st.experimental_rerun()
+            st.rerun()
+
